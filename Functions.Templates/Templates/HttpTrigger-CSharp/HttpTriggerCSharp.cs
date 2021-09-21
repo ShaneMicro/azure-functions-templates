@@ -12,12 +12,18 @@ namespace Company.Function
 {
     public static class HttpTriggerCSharp
     {
-        [FunctionName("HttpTriggerCSharp")]
-        public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.AuthLevelValue, "get", "post", Route = null)] HttpRequest req,
-            ILogger log)
+        private readonly ILogger<BlobTriggerCSharp> log;
+
+        public HttpTriggerCSharp(ILogger<BlobTriggerCSharp> log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            this.log = log;
+        }
+
+        [FunctionName("HttpTriggerCSharp")]
+        public async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.AuthLevelValue, "get", "post", Route = null)] HttpRequest req)
+        {
+            log.LogInformation("Test1 C# HTTP trigger function processed a request.");
 
             string name = req.Query["name"];
 

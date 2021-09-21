@@ -6,12 +6,19 @@ using Microsoft.Extensions.Logging;
 
 namespace Company.Function
 {
-    public static class BlobTriggerCSharp
+    public class BlobTriggerCSharp
     {
-        [FunctionName("BlobTriggerCSharp")]
-        public static void Run([BlobTrigger("PathValue/{name}", Connection = "ConnectionValue")]Stream myBlob, string name, ILogger log)
+        private readonly ILogger<BlobTriggerCSharp> log;
+
+        public BlobTriggerCSharp(ILogger<BlobTriggerCSharp> log)
         {
-            log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
+            this.log = log;            
+        }
+
+        [FunctionName("BlobTriggerCSharp")]
+        public void Run([BlobTrigger("PathValue/{name}", Connection = "ConnectionValue")]Stream myBlob, string name)
+        {
+            log.LogInformation($"Test1 C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
         }
     }
 }
