@@ -1,7 +1,7 @@
 {
     "defaultFunctionName": "AuthenticationEventsTrigger",
     "description": "$authenticationEvents_description",
-    "name": "Authentication Events trigger",
+    "name": "Authentication Events trigger (preview)",
     "language": "C#",
     "category": [
         "$temp_category_core",

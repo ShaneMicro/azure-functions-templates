@@ -1931,13 +1931,13 @@ function app.</value>
     <value>Triggers for Azure AD Authentication event custom extensions. Lets you focus on your business logic.</value>
   </data>
   <data name="authenticationEvents_trigger_displayName" xml:space="preserve">
-    <value>Authentication Events Trigger</value>
+    <value>Authentication Events Trigger (Preview)</value>
   </data>
   <data name="authenticationEvent_trigger_name_label" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="authenticationEvent_trigger_name_help" xml:space="preserve">
-    <value>Triggers for Azure AD Authentication event custom extensions. Lets you focus on your business logic. For more information please see https://github.com/Azure/microsoft-azure-webJobs-extensions-authentication-events</value>
+    <value>Triggers for Azure AD Authentication event custom extensions. Lets you focus on your business logic. For more information please see https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/entra/Microsoft.Azure.WebJobs.Extensions.AuthenticationEvents</value>
   </data>
   <data name="authenticationEvent_trigger_IssuanceStartVer_label" xml:space="preserve">
     <value>OnTokenIssuanceStart Version</value>
